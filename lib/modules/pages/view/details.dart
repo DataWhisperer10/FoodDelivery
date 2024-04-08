@@ -10,6 +10,7 @@ class Details extends StatefulWidget {
 
 class _DetailsState extends State<Details> {
   int orderCount = 1;
+  int orderPrice = 20;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +27,9 @@ class _DetailsState extends State<Details> {
                 Icons.arrow_back_ios_new,
                 color: Colors.black,
               ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             Image.asset(
               "assets/salad33.jpg",

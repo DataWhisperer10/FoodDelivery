@@ -154,54 +154,116 @@ class _HomeState extends State<Home> {
             const SizedBox(
               height: 20,
             ),
-            Container(
-              margin: const EdgeInsets.only(right: 10.0),
-              child: Material(
-                elevation: 5.0,
-                borderRadius: BorderRadius.circular(30),
-                child: Container(
-                  padding: const EdgeInsets.all(5),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        "assets/FruitSalad.jpg",
-                        height: 120,
-                        width: 120,
-                        fit: BoxFit.cover,
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Column(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(right: 10.0),
+                    child: Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(30),
+                      child: Container(
+                        padding: const EdgeInsets.all(5),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "assets/FruitSalad.jpg",
+                              height: 120,
+                              width: 120,
+                              fit: BoxFit.cover,
+                            ),
+                            const SizedBox(width: 20.0),
+                            Column(
+                              children: [
+                                Container(
+                                  width:
+                                      MediaQuery.of(context).size.width / 2.5,
+                                  child: Text(
+                                    "Mediterrian Chickpea Salad",
+                                    style: AppWidget.semiBoldTextFieldStyle(),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 5.0,
+                                ),
+                                Container(
+                                  width: MediaQuery.of(context).size.width / 2,
+                                  child: Text(
+                                    "Honey Goot Cheese",
+                                    style: AppWidget.semiLightTextFieldStyle(),
+                                  ),
+                                ),
+                                Container(
+                                  width: MediaQuery.of(context).size.width / 2,
+                                  child: Text(
+                                    "\$30",
+                                    style: AppWidget.semiBoldTextFieldStyle(),
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                      const SizedBox(width: 20.0),
-                      Column(
-                        children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width / 2,
-                            child: Text(
-                              "Mediterrian Chickpea Salad",
-                              style: AppWidget.semiBoldTextFieldStyle(),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 5.0,
-                          ),
-                          Container(
-                            width: MediaQuery.of(context).size.width / 2,
-                            child: Text(
-                              "Honey Goot Cheese",
-                              style: AppWidget.semiLightTextFieldStyle(),
-                            ),
-                          ),
-                          Container(
-                            width: MediaQuery.of(context).size.width / 2,
-                            child: Text(
-                              "\$30",
-                              style: AppWidget.semiBoldTextFieldStyle(),
-                            ),
-                          )
-                        ],
-                      )
-                    ],
+                    ),
                   ),
-                ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(right: 10.0),
+                    child: Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(30),
+                      child: Container(
+                        padding: const EdgeInsets.all(5),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "assets/FruitSalad.jpg",
+                              height: 120,
+                              width: 120,
+                              fit: BoxFit.cover,
+                            ),
+                            const SizedBox(width: 20.0),
+                            Column(
+                              children: [
+                                Container(
+                                  width:
+                                      MediaQuery.of(context).size.width / 2.5,
+                                  child: Text(
+                                    "Mediterrian Chickpea Salad",
+                                    style: AppWidget.semiBoldTextFieldStyle(),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 5.0,
+                                ),
+                                Container(
+                                  width: MediaQuery.of(context).size.width / 2,
+                                  child: Text(
+                                    "Honey Goot Cheese",
+                                    style: AppWidget.semiLightTextFieldStyle(),
+                                  ),
+                                ),
+                                Container(
+                                  width: MediaQuery.of(context).size.width / 2,
+                                  child: Text(
+                                    "\$30",
+                                    style: AppWidget.semiBoldTextFieldStyle(),
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

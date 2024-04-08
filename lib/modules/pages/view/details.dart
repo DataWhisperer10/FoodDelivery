@@ -47,10 +47,6 @@ class _DetailsState extends State<Details> {
                       "Full of Fiber",
                       style: AppWidget.semiLightTextFieldStyle(),
                     ),
-                    Text(
-                      "\$20",
-                      style: AppWidget.semiBoldTextFieldStyle(),
-                    ),
                   ],
                 ),
                 const Spacer(),
@@ -106,6 +102,84 @@ class _DetailsState extends State<Details> {
             Text(
               "Delight your taste buds with our signature salad, bursting with crisp greens, vibrant vegetables, and zesty dressing for a refreshing culinary experience. Elevate your meal with our exquisite salad, meticulously crafted with farm-fresh ingredients and tantalizing flavors that leave a lasting impression.",
               style: AppWidget.lightTextFieldStyle(),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Row(
+              children: [
+                Text(
+                  "Delivery Time",
+                  style: AppWidget.semiBoldTextFieldStyle(),
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                const Icon(
+                  Icons.alarm,
+                  color: Colors.black26,
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                Text(
+                  "30 Minutes",
+                  style: AppWidget.semiBoldTextFieldStyle(),
+                ),
+              ],
+            ),
+            const Spacer(),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 40.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Total Price : ",
+                        style: AppWidget.semiBoldTextFieldStyle(),
+                      ),
+                      Text(
+                        "\$20",
+                        style: AppWidget.semiBoldTextFieldStyle(),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width / 2,
+                    padding: const EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        const Text(
+                          "Add to Cart ",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 19.0,
+                              fontFamily: "Poppins"),
+                        ),
+                        const SizedBox(width: 40),
+                        Container(
+                          padding: const EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: const Icon(
+                            Icons.shopping_cart_outlined,
+                            color: Colors.blueGrey,
+                          ),
+                        ),
+                        const SizedBox(width: 20),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),

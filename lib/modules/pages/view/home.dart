@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/modules/pages/view/details.dart';
 import 'package:food_delivery/modules/widget/widget_support.dart';
 
 class Home extends StatefulWidget {
@@ -56,42 +57,52 @@ class _HomeState extends State<Home> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Material(
-                    elevation: 5.0,
-                    borderRadius: BorderRadius.circular(30),
-                    child: Container(
-                      padding: const EdgeInsets.all(14),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            "assets/salad33.jpg",
-                            height: 200,
-                            width: 200,
-                            fit: BoxFit.cover,
-                          ),
-                          const SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            "Veggie Toc Tag",
-                            style: AppWidget.semiBoldTextFieldStyle(),
-                          ),
-                          const SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            "Full of Fiber ",
-                            style: AppWidget.semiLightTextFieldStyle(),
-                          ),
-                          const SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            "\$25",
-                            style: AppWidget.semiBoldTextFieldStyle(),
-                          ),
-                        ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Details(),
+                        ),
+                      );
+                    },
+                    child: Material(
+                      elevation: 5.0,
+                      borderRadius: BorderRadius.circular(30),
+                      child: Container(
+                        padding: const EdgeInsets.all(14),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "assets/salad33.jpg",
+                              height: 200,
+                              width: 200,
+                              fit: BoxFit.cover,
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              "Veggie Toc Tag",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              "Full of Fiber ",
+                              style: AppWidget.semiLightTextFieldStyle(),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              "\$25",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -139,7 +150,60 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-            )
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              margin: const EdgeInsets.only(right: 10.0),
+              child: Material(
+                elevation: 5.0,
+                borderRadius: BorderRadius.circular(30),
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        "assets/FruitSalad.jpg",
+                        height: 120,
+                        width: 120,
+                        fit: BoxFit.cover,
+                      ),
+                      const SizedBox(width: 20.0),
+                      Column(
+                        children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: Text(
+                              "Mediterrian Chickpea Salad",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 5.0,
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: Text(
+                              "Honey Goot Cheese",
+                              style: AppWidget.semiLightTextFieldStyle(),
+                            ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: Text(
+                              "\$30",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

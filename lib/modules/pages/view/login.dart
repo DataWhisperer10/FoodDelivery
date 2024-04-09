@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/modules/pages/view/home.dart';
+import 'package:food_delivery/modules/pages/view/signup.dart';
 import 'package:food_delivery/modules/widget/widget_support.dart';
 
 class Login extends StatefulWidget {
@@ -55,7 +57,7 @@ class _LoginState extends State<Login> {
                     borderRadius: BorderRadius.circular(20),
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height / 2,
+                      height: MediaQuery.of(context).size.height / 1.8,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20)),
@@ -110,24 +112,32 @@ class _LoginState extends State<Login> {
                           const SizedBox(
                             height: 50.0,
                           ),
-                          Material(
-                            elevation: 5.0,
-                            borderRadius: BorderRadius.circular(30),
-                            child: Container(
-                              //   margin: const EdgeInsets.all(5),
-                              decoration: const BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(40)),
-                                  color: Color.fromARGB(255, 227, 46, 26)),
-                              width: MediaQuery.of(context).size.width / 2,
-                              child: const Center(
-                                child: Text(
-                                  "LOG IN",
-                                  style: TextStyle(
-                                      fontSize: 30,
-                                      fontFamily: "Poppins",
-                                      fontWeight: FontWeight.w400,
-                                      color: Colors.white),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Home()));
+                            },
+                            child: Material(
+                              elevation: 5.0,
+                              borderRadius: BorderRadius.circular(30),
+                              child: Container(
+                                //   margin: const EdgeInsets.all(5),
+                                decoration: const BoxDecoration(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(40)),
+                                    color: Color.fromARGB(255, 227, 46, 26)),
+                                width: MediaQuery.of(context).size.width / 2,
+                                child: const Center(
+                                  child: Text(
+                                    "LOG IN",
+                                    style: TextStyle(
+                                        fontSize: 30,
+                                        fontFamily: "Poppins",
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white),
+                                  ),
                                 ),
                               ),
                             ),
@@ -137,12 +147,31 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   const SizedBox(
-                    height: 50,
+                    height: 40,
                   ),
                   Container(
-                    child: Text(
-                      "Do not have an Account ? Sign in NOW !!",
-                      style: AppWidget.semiBoldTextFieldStyle(),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Do not have an Account ?",
+                          style: AppWidget.semiBoldTextFieldStyle(),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SignUp()));
+                          },
+                          child: Container(
+                            child: Text(
+                              "Sign in",
+                              style: AppWidget.semiBoldTextFieldStyle(),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   )
                 ],

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/modules/pages/view/home.dart';
+import 'package:food_delivery/modules/pages/view/login.dart';
 import 'package:food_delivery/modules/widget/widget_support.dart';
 
 class SignUp extends StatefulWidget {
@@ -112,21 +114,29 @@ class _SignUpState extends State<SignUp> {
                           Material(
                             elevation: 5.0,
                             borderRadius: BorderRadius.circular(30),
-                            child: Container(
-                              //   margin: const EdgeInsets.all(5),
-                              decoration: const BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(40)),
-                                  color: Color.fromARGB(255, 227, 46, 26)),
-                              width: MediaQuery.of(context).size.width / 2,
-                              child: const Center(
-                                child: Text(
-                                  "Sign In",
-                                  style: TextStyle(
-                                      fontSize: 30,
-                                      fontFamily: "Poppins",
-                                      fontWeight: FontWeight.w400,
-                                      color: Colors.white),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Home()));
+                              },
+                              child: Container(
+                                //   margin: const EdgeInsets.all(5),
+                                decoration: const BoxDecoration(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(40)),
+                                    color: Color.fromARGB(255, 227, 46, 26)),
+                                width: MediaQuery.of(context).size.width / 2,
+                                child: const Center(
+                                  child: Text(
+                                    "Sign In",
+                                    style: TextStyle(
+                                        fontSize: 30,
+                                        fontFamily: "Poppins",
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white),
+                                  ),
                                 ),
                               ),
                             ),
@@ -136,13 +146,32 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                   const SizedBox(
-                    height: 50,
+                    height: 40,
                   ),
-                  Container(
-                    child: Text(
-                      "Do not have an Account ? Sign in NOW !!",
-                      style: AppWidget.semiBoldTextFieldStyle(),
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text(
+                        "Already have an Account ?",
+                        style: AppWidget.semiBoldTextFieldStyle(),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: ((context) => Login()),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          child: Text(
+                            "Log in",
+                            style: AppWidget.boldTextFieldStyle(),
+                          ),
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),

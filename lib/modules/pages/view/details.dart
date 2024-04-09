@@ -104,7 +104,7 @@ class _DetailsState extends State<Details> {
               height: 5,
             ),
             Text(
-              "Delight your taste buds with our signature salad, bursting with crisp greens, vibrant vegetables, and zesty dressing for a refreshing culinary experience. Elevate your meal with our exquisite salad, meticulously crafted with farm-fresh ingredients and tantalizing flavors that leave a lasting impression.",
+              "Delight your taste buds with our signature salad, bursting with crisp greens, \n vibrant vegetables, and zesty dressing for a refreshing culinary experience.\n Elevate your meal with our exquisite salad, meticulously crafted with farm-fresh ingredients and tantalizing flavors that leave a lasting impression.",
               style: AppWidget.lightTextFieldStyle(),
             ),
             const SizedBox(

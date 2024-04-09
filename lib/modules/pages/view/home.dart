@@ -155,7 +155,7 @@ class _HomeState extends State<Home> {
               height: 20,
             ),
             SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
+              scrollDirection: Axis.vertical,
               child: Column(
                 children: [
                   Container(

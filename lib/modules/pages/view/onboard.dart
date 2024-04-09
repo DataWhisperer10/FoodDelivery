@@ -49,19 +49,19 @@ class _OnBoardState extends State<OnBoard> {
                         children: [
                           Image.asset(
                             contents[i].image,
-                            height: 350,
+                            height: 250,
                             width: MediaQuery.of(context).size.width,
                             fit: BoxFit.fill,
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Text(
                             contents[i].title,
                             style: AppWidget.semiBoldTextFieldStyle(),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Text(
                             contents[i].description,
@@ -95,7 +95,7 @@ class _OnBoardState extends State<OnBoard> {
                 decoration: BoxDecoration(
                     color: Colors.red, borderRadius: BorderRadius.circular(20)),
                 height: 60,
-                margin: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(10),
                 width: double.infinity,
                 child: const Center(
                   child: Text(

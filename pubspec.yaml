@@ -63,6 +63,8 @@ flutter:
   assets:
     - assets/
     - assets/salad33.jpg
+    - assets/falcon_logo.png
+    - assets/rajeev_kitchen.png
     - assets/FruitSalad.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

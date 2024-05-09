@@ -5,7 +5,9 @@ import 'package:food_delivery/modules/pages/view/login.dart';
 import 'package:food_delivery/modules/widget/widget_support.dart';
 
 class SignUp extends StatefulWidget {
-  const SignUp({super.key});
+  final Key? key;
+
+  const SignUp({this.key}) : super(key: key);
 
   @override
   State<SignUp> createState() => _SignUpState();
@@ -36,7 +38,6 @@ class _SignUpState extends State<SignUp> {
           MaterialPageRoute(builder: (context) => Home()),
           (Route<dynamic> route) => false,
         );
-        // Navigator.push(context,MaterialPageRoute(builder: (context) => Home()));
       } on FirebaseException catch (e) {
         if (e.code == 'weak-password') {
           ScaffoldMessenger.of(context).showSnackBar(const SnackBar(

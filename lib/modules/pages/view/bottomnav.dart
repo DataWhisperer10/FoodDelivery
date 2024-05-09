@@ -22,10 +22,10 @@ class _BottomNavState extends State<BottomNav> {
   late Wallet wallet;
   @override
   void initState() {
-    homepage = Home();
-    order = Order();
-    profile = Profile();
-    wallet = Wallet();
+    homepage = const Home();
+    order = const Order();
+    profile = const Profile();
+    wallet = const Wallet();
     pages = [homepage, order, wallet, profile];
     super.initState();
   }
@@ -37,14 +37,14 @@ class _BottomNavState extends State<BottomNav> {
           height: 40,
           backgroundColor: Colors.white,
           color: Colors.black,
-          animationDuration: Duration(microseconds: 500),
+          animationDuration: const Duration(microseconds: 500),
           animationCurve: Curves.bounceInOut,
           onTap: (int index) {
             setState(() {
               currentIndex = index;
             });
           },
-          items: [
+          items: const [
             Icon(
               Icons.home_outlined,
               color: Colors.white,
